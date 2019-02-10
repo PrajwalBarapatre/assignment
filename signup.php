@@ -1,3 +1,5 @@
+
+<?php include("server.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -28,17 +30,18 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <h4>Sign In</h4>
+      <h4>Sign Up</h4>
       <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="login.php">
-      <!-- <input type="text" id="username" class="fadeIn second" name="username" placeholder="username"> -->
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-      <input type="text" id="email" class="fadeIn third" name="email" placeholder="email">
-      <!-- <input type="text" id=" con_password" class="fadeIn third" name="con_password" placeholder="confirm password"> -->
-      <input type="submit" class="fadeIn fourth" value="Sign Up" name="register">
+    <form method="POST" action="signup.php">
+      <?php include("errors.php") ?>
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="username" value="<?php echo $username ?>" >
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password"  >
+      <input type="text" id="email" class="fadeIn third" name="email" placeholder="email" value="<?php echo $email ?>" >
+      <input type="password" id=" con_password" class="fadeIn third" name="con_password" placeholder="confirm password"  >
+      <input type="submit" class="fadeIn fourth" value="Sign Up" name="reg_user">
     </form>
 
     <!-- Remind Passowrd -->
@@ -47,9 +50,9 @@
     </div>
     <div id="formFooter"> -->
       <p>
-        Not yet a member ? 
+        Already a member ?
       </p>
-        <a class="underlineHover" href="signup.html">Sign In</a>
+        <a class="underlineHover" href="login.php">Log In</a>
       
       </div>
 

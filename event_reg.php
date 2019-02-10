@@ -1,31 +1,4 @@
-<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!------ Include the above in your HEAD tag ---------->
-
-<!-- <div class="wrapper fadeInDown">
-  <div id="formContent"> -->
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
-    <!-- <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div> -->
-
-    <!-- Login Form -->
-    <!-- <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form> -->
-
-    <!-- Remind Passowrd -->
-    <!-- <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div> -->
-
-  <!-- </div>
-</div> -->
+<?php include("server.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -36,7 +9,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Sign Up</title>
+    <title>Event Registration</title>
 
     <!-- Bootstrap -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -56,29 +29,34 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <h4>Sign Up</h4>
+      <h4>Event Form</h4>
       <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="register.php">
-      <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-      <input type="text" id="email" class="fadeIn third" name="email" placeholder="email">
-      <input type="text" id=" con_password" class="fadeIn third" name="con_password" placeholder="confirm password">
-      <input type="submit" class="fadeIn fourth" value="Sign Up" name="register">
+    <form method="POST" action="event_reg.php" id="event_form">
+      <?php include("errors.php") ?>
+      <input type="text" id="event_name" class="fadeIn second" name="event_name" placeholder="Name"  >
+      <textarea name="event_desc" form="event_form" placeholder="Description"></textarea>
+      <input type="text" id="event_venue" class="fadeIn second" name="event_venue" placeholder="Venue"  >
+      <input type="date" id="event_date" class="fadeIn second" name="event_date" placeholder="Date" >
+      <input type="time" id="event_time" class="fadeIn second" name="event_time" placeholder="Time" >
+      <br>
+      
+      <input type="submit" class="fadeIn fourth" value="Submit" name="event_reg">
     </form>
+    <!-- <textarea name="event_desc" form="event_form" placeholder="Descriprtion"></textarea> -->
 
     <!-- Remind Passowrd -->
     <!-- <div id="formFooter">
       <a class="underlineHover" href="#">Forgot Password?</a>
     </div>
     <div id="formFooter"> -->
-      <p>
+      <!-- <p>
         Already a member ?
       </p>
-        <a class="underlineHover" href="login.html">Sign In</a>
-      
+        <a class="underlineHover" href="login.php">Log In</a>
+       -->
       </div>
 
   </div>
