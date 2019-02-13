@@ -51,7 +51,7 @@
       <p>
         Not yet a member ? 
       </p>
-        <a class="underlineHover" href="signup.php">Sign Up</a>
+        <a class="underlineHover" href="signup.php" style="text-decoration : none !important;">Sign Up</a>
       
       </div>
 

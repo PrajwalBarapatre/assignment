@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 13, 2019 at 11:06 AM
+-- Generation Time: Feb 13, 2019 at 12:55 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -65,14 +65,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'Prajwal', 'prajwalbarapatre13@gmail.com', '967454173c7637d071a8bd30224407e3');
+(1, 'Prajwal', 'prajwalbarapatre13@gmail.com', '967454173c7637d071a8bd30224407e3'),
+(4, 'Akash', 'verma@common.com', '827ccb0eea8a706c4c34a16891f84e7b'),
+(5, 'kash', 'sbarapatre62@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b'),
+(6, 'Sandeep', 'common@email.com', '9efab2399c7c560b34de477b9aa0a465');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

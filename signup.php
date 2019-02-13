@@ -52,7 +52,7 @@
       <p>
         Already a member ?
       </p>
-        <a class="underlineHover" href="login.php">Log In</a>
+        <a class="underlineHover" href="login.php" style="text-decoration : none !important;">Log In</a>
       
       </div>
 

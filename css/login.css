@@ -343,6 +343,7 @@ html {
   .underlineHover:after {
     display: block;
     left: 0;
+    text-decoration:none;
     bottom: -10px;
     width: 0;
     height: 2px;
@@ -353,10 +354,12 @@ html {
   
   .underlineHover:hover {
     color: #0d0d0d;
+    text-decoration:none;
   }
   
   .underlineHover:hover:after{
     width: 100%;
+    text-decoration:none;
   }
   
   
